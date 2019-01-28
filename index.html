@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TV Shows Database</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONTS -->
+            <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700|Roboto:300,400,400i,500,700" rel="stylesheet">
+        <!-- STYLE -->
+            <!-- NORMALIZE -->
+            <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+            <!-- MAIN STYLE -->
+            <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <!-- VUE.JS -->
+            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        
+        <div id="app" class="master-container">
+            <!-- LANDING PAGE -->
+            <!-- APPEAR ONLY BEFORE REQUEST -->
+            <div class="bg-holder" v-if="hasRequested == false">
+                <main class="lp-container" >
+                    <!-- TITLE AND PARAGRAPH -->
+                    <h1 class="welcome-title">tv shows database</h1>
+                    <p class="welcome-p">Get informations about your favorite TV Shows</p>
+                    <!-- SEARCH BOX -->
+                    <div class="lp-search-box">
+                        <h4 class="lp-search-box-legend">show name</h4>
+                        <input class="lp-search-box-input" placeholder="Game of thrones" type="text" v-model="request" />
+                        <button class="lp-search-box-button" @click="SendRequest()">search</button> 
+                    </div>
+                    <!-- HIDDEN -->
+                    <div class="hidden">
+                        <p> Testing </p>
+                    </div>
+                    <!-- CREDITS -->
+                    <p class="lp-credits">All credits to <a href="https://www.tvmaze.com/">TVmaze</a></p>
+                </main>  
+            </div>
+            <div class="single-result-display" v-if="resultNb == 1">
+                <p> coucou </p>
+            </div>
+            <div class="multiple-result-display" v-else>
+                <p> hello </p>
+            </div>          
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

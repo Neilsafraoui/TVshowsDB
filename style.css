@@ -1,0 +1,143 @@
+
+
+/*** FONTS ***/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p, span, button, input {
+    font-family: 'Roboto', sans-serif;
+}
+
+/***** GENERIC *****/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+/* height: 100%; */
+    font-size: 14px;
+}
+
+input, button {
+    outline: none;
+}
+
+.master-container {
+    height: 100%;
+}
+
+/***** LANDING PAGE *****/
+
+.bg-holder { 
+    height: 100%;
+    background: url('img/retro-tv-bg-o.jpg');
+    background-position: center center;
+  
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+
+    text-align: center;
+}
+
+.lp-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #BBA6A1;
+    text-transform: uppercase;
+    margin-top: 15%;
+}
+
+.welcome-p {
+    color: #CBC1C5;
+    width: 67%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    padding: 2% 0;
+    border-bottom: 1px solid #CBC1C5;
+}
+
+.welcome-hr {
+    width: 33%;
+    margin: 0 auto;
+    color: #CBC1C5;
+    background-color: #CBC1C5;
+    height: 1px;
+    border: none;
+}
+
+.lp-search-box {
+    width: 260px;
+    margin: 0 auto;
+}
+
+.lp-search-box-legend {
+    font-weight: 600;
+    color: #826767;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 5%;
+}
+
+.lp-search-box-input {
+    color: #CBC1C5;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #826767;
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.1em;
+    width: 100%;
+    display: block;
+    margin-bottom: 7%;
+    padding-bottom: 1%;
+}
+
+::placeholder {
+    color: #CBC1C5;
+}
+
+.lp-search-box-button {
+    width: 260px;
+    height: 40px;
+    border: none;
+    background: #826767;
+    color: #CBC1C5;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.lp-credits {
+    color: #CBC1C5;
+    font-size: 0.9em;
+}
+
+.lp-credits a {
+    color: #CBC1C5;
+}
+
+/***** UTILITIES *****/
+
+.hidden {
+    visibility: hidden;
+}
